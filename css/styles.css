@@ -45,7 +45,9 @@ a {
 /* HEADER */
 .header {
   border-bottom: 1px solid #e7e9fc;
-  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  /* box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08); */
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -142,14 +144,16 @@ a {
   padding-bottom: 188px;
   display: flex;
 
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7)),
-    linear-gradient(rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/peopleoffice.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1440px 600px;
-  /* max-width: 1400px;
-  margin: 0 auto; */
-  /* background-size: cover; */
+  background-size: cover;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .main-name {
@@ -240,6 +244,7 @@ a {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   background-color: #f4f4fd;
+  margin-bottom: 8px;
 }
 /* .icon {
   display: flex;
@@ -279,8 +284,8 @@ a {
 .name-position {
   padding-top: 32px;
   padding-bottom: 32px;
-  padding-left: 16px;
-  padding-right: 16px;
+  /* padding-left: 16px;
+  padding-right: 16px; */
 }
 .team-name {
   font-weight: 500;
@@ -305,7 +310,7 @@ a {
   justify-content: center;
   gap: 24px;
 }
-.icon-networks {
+.team-icon-networks {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -316,8 +321,8 @@ a {
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-networks svg {
-  fill: #fff;
+.icon-social-networks {
+  fill: #f4f4fd;
 }
 
 .team .icon-networks:hover,
@@ -360,7 +365,8 @@ a {
   position: relative;
   overflow: hidden;
 }
-.text-overlay {
+/* .text-overlay  */
+.text-overlay-works {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -376,8 +382,8 @@ a {
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.works-item:hover .text-overlay {
-  transform: translateY(0);
+.works-item:hover .text-overlay-works {
+  transform: translateY(0%);
 }
 .works-item:hover {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -432,6 +438,9 @@ a {
   padding: 0;
   margin-bottom: 16px;
 }
+.container-icons {
+  align-items: baseline;
+}
 
 .footer-text-media {
   font-weight: 500;
@@ -444,4 +453,8 @@ a {
 .footer .icon-networks:hover,
 .footer .icon-networks:focus {
   background-color: #31d0aa;
+}
+
+.footer .social-networks {
+  gap: 16px;
 }
