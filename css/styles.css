@@ -422,6 +422,7 @@ a {
 }
 .footer .container {
   display: flex;
+  align-items: baseline;
 }
 .footer-logo-text {
   margin-right: 120px;
@@ -438,9 +439,9 @@ a {
   padding: 0;
   margin-bottom: 16px;
 }
-.container-icons {
+/* .container-icons {
   align-items: baseline;
-}
+} */
 
 .footer-text-media {
   font-weight: 500;
